@@ -4,7 +4,7 @@ import { Camera, BrainCircuit, BarChart3 } from 'lucide-react';
 
 const HowItWorks = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "end center"]
@@ -31,9 +31,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-slate-900 relative overflow-hidden">
+    <section id="comofunciona" className="py-24 lg:py-32 bg-slate-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="text-center mb-24">
           <h2 className="text-sm font-bold tracking-widest text-[var(--color-neon-teal)] uppercase mb-3">
             Simplicidad Técnica
@@ -47,12 +47,12 @@ const HowItWorks = () => {
         </div>
 
         <div ref={containerRef} className="relative max-w-4xl mx-auto">
-          
+
           {/* Background Line */}
           <div className="absolute left-[38px] md:left-1/2 md:-ml-[2px] top-[40px] bottom-[40px] w-1 bg-white/5 z-0"></div>
-          
+
           {/* Animated Scroll Line */}
-          <motion.div 
+          <motion.div
             className="absolute left-[38px] md:left-1/2 md:-ml-[2px] top-[40px] w-1 bg-gradient-to-b from-[var(--color-neon-teal)] via-blue-500 to-indigo-500 z-10 origin-top"
             style={{ height: lineHeight, maxHeight: 'calc(100% - 80px)' }}
           ></motion.div>
@@ -62,17 +62,17 @@ const HowItWorks = () => {
               const isEven = idx % 2 !== 0; // reverse for visual flair on desktop
               return (
                 <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center gap-8 ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                  
+
                   {/* Content */}
-                  <div className={`flex-1 w-full md:w-1/2 ${isEven ? 'md:text-left' : 'md:text-right'} pl-24 md:pl-0`}>
-                    <motion.div 
+                  <div className={`flex-1 w-full md:w-1/2 md:text-left pl-24 md:pl-0`}>
+                    <motion.div
                       initial={{ opacity: 0, x: isEven ? 50 : -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                       className={`bg-slate-800/50 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/5 hover:border-white/20 transition-colors shadow-2xl relative`}
                     >
-                      <h4 className={`text-2xl font-bold text-white mb-3 flex items-center gap-3 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                      <h4 className="text-2xl font-bold text-white mb-3 flex items-center gap-3 md:flex-row">
                         <span className="text-[var(--color-neon-teal)] font-mono text-sm opacity-50">0{idx + 1}</span>
                         {step.title}
                       </h4>
@@ -84,7 +84,7 @@ const HowItWorks = () => {
 
                   {/* Center Node (Icon) */}
                   <div className="absolute left-0 md:relative md:w-20 md:flex flex-col flex-none items-center justify-center shrink-0">
-                    <motion.div 
+                    <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true, margin: "-100px" }}

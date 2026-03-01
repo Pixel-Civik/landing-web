@@ -8,33 +8,33 @@ const Services = () => {
       icon: <Video className="w-8 h-8 text-blue-400" />,
       title: "Detecta",
       desc: "Análisis continuo de streams de video e imágenes usando modelos avanzados de visión computacional para identificar anomalías y riesgos en milisegundos.",
-      className: "md:col-span-2 bg-gradient-to-br from-slate-800/80 to-slate-900 border-white/10",
+      className: "bg-gradient-to-br from-slate-800/80 to-slate-900 border-white/10",
     },
     {
       icon: <Bell className="w-8 h-8 text-[var(--color-neon-teal)]" />,
       title: "Alerta",
       desc: "Genera notificaciones y alertas operativas en tiempo real directamente a tus sistemas actuales.",
-      className: "md:col-span-1 bg-gradient-to-br from-blue-900/20 to-slate-900 border-blue-500/20",
+      className: "bg-gradient-to-br from-blue-900/20 to-slate-900 border-blue-500/20",
     },
     {
       icon: <FileSearch className="w-8 h-8 text-indigo-400" />,
       title: "Evidencia",
       desc: "Crea respaldos visuales estructurados y auditables, garantizando trazabilidad total para reclamaciones.",
-      className: "md:col-span-1 bg-gradient-to-br from-indigo-900/20 to-slate-900 border-indigo-500/20",
+      className: "bg-gradient-to-br from-indigo-900/20 to-slate-900 border-indigo-500/20",
     },
     {
       icon: <LayoutDashboard className="w-8 h-8 text-emerald-400" />,
       title: "Consolida",
       desc: "Centraliza eventos, analíticas de riesgo y reportes de desempeño en un único panel de control intuitivo y personalizable.",
-      className: "md:col-span-2 bg-gradient-to-bl from-slate-800/80 to-slate-900 border-white/10",
+      className: "bg-gradient-to-bl from-slate-800/80 to-slate-900 border-white/10",
     }
   ];
 
   return (
-    <section className="py-32 bg-slate-950 relative overflow-hidden text-left">
+    <section id="capacidades" className="py-32 bg-slate-950 relative overflow-hidden text-left">
       {/* Subtle background glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] mix-blend-screen opacity-60 pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-20 flex flex-col items-center text-center">
           <motion.div
@@ -46,7 +46,7 @@ const Services = () => {
             <Sparkles className="w-4 h-4 text-[var(--color-neon-teal)]" />
             Capacidades Core
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,20 +56,20 @@ const Services = () => {
             Plataforma Integral
           </motion.h2>
           <motion.p
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ delay: 0.2 }}
-             className="text-lg text-slate-400 max-w-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-slate-400 max-w-2xl"
           >
-             Todo lo que necesitas para transformar tu infraestructura visual pasiva en un sistema activo de inteligencia corporativa.
+            Todo lo que necesitas para transformar tu infraestructura visual pasiva en un sistema activo de inteligencia corporativa.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {servicesList.map((svc, idx) => (
-            <motion.div 
-              key={idx} 
+            <motion.div
+              key={idx}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -80,7 +80,7 @@ const Services = () => {
               )}
             >
               <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full items-start">
                 <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-10 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
                   {svc.icon}
