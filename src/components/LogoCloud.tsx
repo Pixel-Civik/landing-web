@@ -2,11 +2,15 @@
 import utecLogo from '../assets/utec_ventures.png';
 import startupLogo from '../assets/startup_peru.png';
 import freshmartLogo from '../assets/freshmart.png';
+import akinovaLogo from '../assets/akinova-removebg-preview.png';
+import mokLogo from '../assets/MOK.png';
 
 const logos = [
   { name: 'UTEC Ventures', src: utecLogo },
   { name: 'Startup Perú', src: startupLogo },
   { name: 'Freshmart', src: freshmartLogo },
+  { name: 'Akinova', src: akinovaLogo, className: 'h-20 md:h-28 lg:h-32' },
+  { name: 'MOK', src: mokLogo },
 ];
 
 const LogoCloud = () => {
@@ -32,7 +36,7 @@ const LogoCloud = () => {
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="object-contain opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 h-10 md:h-16 lg:h-20"
+                  className={`object-contain opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 ${logo.className ?? 'h-10 md:h-16 lg:h-20'}`}
                 />
               </div>
             ))}
